@@ -56,10 +56,25 @@ starting_number_of_plants = 100;
 week = 10;
 number_of_plants = starting_number_of_plants * (2 ** week);
 total_plant_space = number_of_plants * 0.8;
-console.log(`The Amount of additionl space required if starting with 100 plants and no pruning for 10 weeks is:`, total_plant_space - area, "meter square")
+console.log(`The Amount of additional space required if starting with 100 plants and no pruning for 10 weeks is:`, total_plant_space - area, "meter square")
 
 console.log(`The radius of that new garden would be:`,Math.sqrt((total_plant_space / PI)));
 
 
 //=================part 3 =====================
+console.log("===============Part3======================");
+starting_number_of_plants = 100;
+try {
+week = 1;
+number_of_plants = starting_number_of_plants * (2 ** week);
+total_plant_space = number_of_plants * 0.8;
+if(total_plant_space > area)
+ {
+    throw Error (" You are Exceeding the  avalaiblae sapce");
 
+ }
+    
+} catch (error) {
+    console.log(error);  
+}
+console.log("=============end=============")
